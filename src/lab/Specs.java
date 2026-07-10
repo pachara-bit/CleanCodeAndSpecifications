@@ -15,7 +15,13 @@ package lab;
  * ==========================================================================
  */
 public class Specs {
-
+    /**
+     * นับจำนวนตัวอักษร
+     * @param arr != null ต้องไม่ใช่ค่าว่าง; 
+     * @param key มีค่าเท่ากับ i
+     * @return จำนวนตัวอักษตรที่ out put ออกมา
+     * @throws IllegalArgumentException ถ้าเป็น null
+     */
     // TODO ข้อ 4: เขียน JavaDoc ให้เมธอดนี้
     public static int firstIndexOf(int[] arr, int key) {
         if (arr == null) throw new IllegalArgumentException("arr must not be null");
@@ -26,9 +32,10 @@ public class Specs {
 
     // TODO ข้อ 5: เขียน JavaDoc ให้เมธอดนี้
     /**
-     * 
-     * @param radius
-     * @return
+     * หาพื้นที่วงกลม
+     * @param radius รัศมีของวงกลมที่ต้องหา
+     * @return พื้นที่วงกลมทั้งหมด
+     * @throws llegalArgumentException if มีค่า <= 0
      */
     public static double circleArea(double radius) {
         if (radius < 0) throw new IllegalArgumentException("radius must be >= 0");
@@ -37,6 +44,12 @@ public class Specs {
 
     // TODO ข้อ 6: เขียน JavaDoc ให้เมธอดนี้
     //   (เมธอดนี้ตัดช่องว่างหน้า-หลัง แล้วแปลงเป็นตัวพิมพ์เล็ก;
+    /**
+     * ทำให้ตัวอักษตรติดกันและทุกตัวเป็นพิมพ์เล็ก
+     * @param s if input null จะ retutn ค่าว่าง
+     * @return เมธอดจะเป็นพิมพ์เล็กทุกตัว
+     * @throws null
+     */
     //    input null ให้คืน string ว่าง)
     public static String normalize(String s) {
         if (s == null) return "";
